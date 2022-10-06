@@ -95,6 +95,16 @@ cat.image.save("my_cat.gif")
 소스코드가 있는 위치에 그림이 저장됩니다.  
 ![image](https://user-images.githubusercontent.com/47412229/194287774-3a4091e3-3225-4b0d-acba-dd6a082ec860.png)
 
++ 도면(낙서) 보기  
+
+```
+cat.image.show()
+```
+
+도면(낙서)를 보여줍니다.   
+
+![image](https://user-images.githubusercontent.com/47412229/194289715-4070eed6-ac4e-4412-8186-9a340d5abf28.png)
+
 
 
 
