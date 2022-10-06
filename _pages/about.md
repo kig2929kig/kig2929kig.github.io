@@ -57,4 +57,4 @@ author_profile: true
 
 + 28일만에 클릭수 10회 달성  
   
-<img src = "https://user-images.githubusercontent.com/47412229/194296459-a617b2f0-b57d-4d91-9219-8f69cad70c02.png" width="50%" height="50%" />
+<p align="center"><img src = "https://user-images.githubusercontent.com/47412229/194296459-a617b2f0-b57d-4d91-9219-8f69cad70c02.png" width="50%" height="50%" /></p>
