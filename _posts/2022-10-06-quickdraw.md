@@ -38,3 +38,7 @@ tags:
 <p align="center"><img src = "https://user-images.githubusercontent.com/47412229/194263135-d4704c56-8ca3-40bb-8f02-1e45aecfb0b4.png" width="80%" height="80%"/></p>  
 [github - Dataset](https://github.com/googlecreativelab/quickdraw-dataset)  
 
+## 3. quickdraw API 따라하기  
++ pip를 사용하여 파이썬 라이브러리 설치  
+    pip install quickdraw
+    
