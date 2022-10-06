@@ -40,5 +40,8 @@ tags:
 
 ## 3. quickdraw API 따라하기  
 + pip를 사용하여 파이썬 라이브러리 설치  
-    pip install quickdraw
+
+```
+pip install quickdraw
+```
     
