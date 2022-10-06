@@ -1,3 +1,16 @@
+---
+layout: single
+title: "퀵, 드로우! 소개"
+classes: wide
+toc : true
+toc_sticky: true
+categories:
+  - 퀵, 드로우!
+tags:
+  - QUICK, DRAW!
+  - 퀵, 드로우!
+---
+
 # 퀵, 드로우!(QUICK, DRAW!) 소개  
 
 여러분의 낙서(그림)를 머신 러닝 기술을 통해서 학습하고 어떤 낙서(그림)인지 추측하는 게임.  머신 러닝을 재미있는 방식으로 활용할 수 있는 예를 소개하기 위해 제작되었습니다.  
