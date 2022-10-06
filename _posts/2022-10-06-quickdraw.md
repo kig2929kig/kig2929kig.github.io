@@ -60,7 +60,7 @@ print(cat)
 `QuickDrawData()` 클래스는 구글 quick, draw! 데이터 세트를 가져옵니다.  
 `get_drawing(name, index)` 도면(낙서)을 가져옵니다. name(string)은 가져올 도면(낙서)의 이름(cat, airplane 등)이며 index(int)는 가져올 도면의 인덱스입니다.  
 
-소스 코드 실행 결과 `QuickDrawing key_id=4827440083894272`입니다. 고양이에 대한 key_id 값을 보여주며 실행할 때마다 key_id 값이 달라지는 것을 알 수 있으며 랜덤하게 고양이 도면(낙서)을 가지고 오는 것을 알 수 있습니다. key_id는 모든 도면(낙서)의 고유 식별자입니다.  
+소스 코드 실행 결과는 `QuickDrawing key_id=4827440083894272`입니다. 고양이에 대한 key_id 값을 보여주며 실행할 때마다 key_id 값이 달라지는 것을 알 수 있습니다. 즉, 랜덤하게 고양이 도면(낙서)을 가지고 오는 것을 알 수 있습니다. key_id는 모든 도면(낙서)의 고유 식별자입니다.  
 
 
 
