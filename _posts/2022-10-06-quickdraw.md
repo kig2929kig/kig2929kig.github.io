@@ -56,7 +56,7 @@ qd = QuickDrawData()
 cat = qd.get_drawing("cat")
 
 print(cat)
-
-```
+```  
+`QuickDrawData()` 클래스는 구글 quick, draw! 데이터 세트를 가져옵니다.  
 `get_drawing(name, index)` 도면(낙서)을 가져옵니다. name(string)은 가져올 도면(낙서)의 이름(cat, airplane 등)이며 index(int)는 가져올 도면의 인덱스입니다.  
 
