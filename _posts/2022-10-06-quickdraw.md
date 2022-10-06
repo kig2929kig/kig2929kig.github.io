@@ -13,7 +13,7 @@ tags:
 
 # 퀵, 드로우!(QUICK, DRAW!) 소개  
 
-여러분의 낙서(그림)를 머신 러닝 기술을 통해서 학습하고 어떤 낙서(그림)인지 추측하는 게임.  머신 러닝을 재미있는 방식으로 활용할 수 있는 예를 소개하기 위해 제작되었습니다.  
+여러분의 낙서(그림)를 머신 러닝 기술을 통해서 학습하고 어떤 낙서(그림)인지 추측하는 게임으로, 머신 러닝을 재미있는 방식으로 활용할 수 있는 예를 소개하기 위해 제작되었다고 합니다.  
 <p align="center"><img src = "https://user-images.githubusercontent.com/47412229/194256670-bfe7cc4a-da88-4563-91a3-d53ad99336d8.png" width="80%" height="80%"/></p>  
 
 [참고 : QUICK, DRAW!](https://quickdraw.withgoogle.com/)  
@@ -28,7 +28,7 @@ tags:
 <br>  
   
 ## 2. 세계 최대의 낙서 데이터 세트(?)  
-+ 많은 사용자가 게임을 진행하면서 얻어진 다양한 결과(낙서)를 볼 수 있습니다. 또한 결과(낙서)를 오픈 소스로 공유합니다.  
++ 많은 사용자가 게임을 진행하면서 얻어진 다양한 결과(낙서)를 볼 수 있습니다. 또한, 결과(낙서)를 오픈 소스로 공유합니다.  
 
 <p align="center"><img src ="https://user-images.githubusercontent.com/47412229/194261226-d1c6f930-97cf-4522-8899-014b0c3a357a.png" width="80%" height="80%"/></p>
 <br>  
@@ -59,4 +59,8 @@ print(cat)
 ```  
 `QuickDrawData()` 클래스는 구글 quick, draw! 데이터 세트를 가져옵니다.  
 `get_drawing(name, index)` 도면(낙서)을 가져옵니다. name(string)은 가져올 도면(낙서)의 이름(cat, airplane 등)이며 index(int)는 가져올 도면의 인덱스입니다.  
+
+소스 코드 실행 결과 `QuickDrawing key_id=4827440083894272`입니다. 고양이에 대한 key_id 값을 보여주며 실행할 때마다 key_id 값이 달라지는 것을 알 수 있으며 랜덤하게 고양이 도면(낙서)을 가지고 오는 것을 알 수 있습니다. key_id는 모든 도면(낙서)의 고유 식별자입니다.  
+
+
 
