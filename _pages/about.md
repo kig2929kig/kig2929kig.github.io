@@ -51,4 +51,13 @@ author_profile: true
 - 2020년 경기도 기능지도 연구대회 3등급 (경기도교육감)
 
 
+## Google 검색 실정  
+
+ㅎㅎ 구글 Search Console Insights 에서 28일 만에 클릭수 10회를 달성했다고 알림이 왔습니다. ㅎㅎ 10회 클릭수가 100000회가 되는 그날까지 ...   
+
++ 28일만에 클릭수 10회 달성  
+![image](https://user-images.githubusercontent.com/47412229/194296459-a617b2f0-b57d-4d91-9219-8f69cad70c02.png)
+
+
+ㅎㅎ 구글 Search Console Insights 에서 
 
