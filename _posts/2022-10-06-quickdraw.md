@@ -35,4 +35,6 @@ tags:
     
 + 비행기(airplane)를 클릭해 보면 비행기에 대한 다양한 그림을 볼 수 있습니다. 또한, 비행기라고 생각되지 않는 그림을 클릭하면 그림에 대한 정보(날짜, 나라)가 보이고 부적절하다고 판단된다면 제보할 수 있습니다.  
 
-<p align="center"><img src = "https://user-images.githubusercontent.com/47412229/194263135-d4704c56-8ca3-40bb-8f02-1e45aecfb0b4.png" width="80%" height="80%"/></p>
+<p align="center"><img src = "https://user-images.githubusercontent.com/47412229/194263135-d4704c56-8ca3-40bb-8f02-1e45aecfb0b4.png" width="80%" height="80%"/></p>  
+[github - Dataset](https://github.com/googlecreativelab/quickdraw-dataset)  
+
