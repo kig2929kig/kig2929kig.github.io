@@ -56,5 +56,6 @@ author_profile: true
 ㅎㅎ 구글 Search Console Insights 에서 28일 만에 클릭수 10회를 달성했다고 알림이 왔습니다. ㅎㅎ 10회 클릭수가 100000회가 되는 그날까지...  
 
 + 28일만에 클릭수 10회 달성  
-<img src ="https://user-images.githubusercontent.com/47412229/194296459-a617b2f0-b57d-4d91-9219-8f69cad70c02.png" width="50%" height="50%" />
+  
+![image](https://user-images.githubusercontent.com/47412229/194296459-a617b2f0-b57d-4d91-9219-8f69cad70c02.png)
 
