@@ -60,7 +60,30 @@ print(cat)
 `QuickDrawData()` 클래스는 구글 quick, draw! 데이터 세트를 가져옵니다.  
 `get_drawing(name, index)` 도면(낙서)을 가져옵니다. name(string)은 가져올 도면(낙서)의 이름(cat, airplane 등)이며 index(int)는 가져올 도면의 인덱스입니다.  
 
-소스 코드 실행 결과는 `QuickDrawing key_id=4827440083894272`입니다. 고양이에 대한 key_id 값을 보여주며 실행할 때마다 key_id 값이 달라지는 것을 알 수 있습니다. 즉, 랜덤하게 고양이 도면(낙서)을 가지고 오는 것을 알 수 있습니다. key_id는 모든 도면(낙서)의 고유 식별자입니다.  
+소스 코드 실행 결과는 `QuickDrawing key_id=4827440083894272`입니다. 고양이에 대한 key_id 값을 보여주며 실행할 때마다 key_id 값이 달라지는 것을 알 수 있습니다. 즉, 랜덤하게 고양이 도면(낙서)을 가지고 오는 것을 알 수 있습니다. key_id는 모든 도면(낙서)의 고유 식별자입니다.   
+
++ 도면(낙서)의 모든 속성 출력하기  
+
+```
+print(cat.name)
+print(cat.key_id)
+print(cat.countrycode)
+print(cat.recognized)
+print(cat.timestamp)
+print(cat.no_of_strokes)
+print(cat.image_data)
+print(cat.strokes)
+```
+
+`name` 도면의 이름(cat, airplane ant 등)을 반환합니다.  
+`countrycode` 도면의 국가 코드를 반환합니다.
+`recognized` 도면이 인식되었는지 여부를 나타내며 반환값은 부울(True, False)값입니다.
+`timestamp` 도면이 작성된 시간(초)을 반환합니다.
+`no_of_strokes` 도면을 만드는 데 사용되는 펜 스트로크 수를 반환합니다.
+`image_data` 원시 이미지 데이터를 X좌표 목록과 Y좌표 목록이 있는 획 목록으로 반환합니다.  
+[이미지 데이터 표시](https://github.com/googlecreativelab/quickdraw-dataset#simplified-drawing-files-ndjson)  
+`strokes` 도면을 구성하는 (x,y) 좌표 목록이 포함된 펜 선 목록을 반환합니다.  
+
 
 
 
