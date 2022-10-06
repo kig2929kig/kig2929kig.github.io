@@ -25,7 +25,7 @@ tags:
 
 <p align="center"><img src ="https://user-images.githubusercontent.com/47412229/194258488-aa5243f7-d1f7-4547-b984-41d449aba95b.png" width="80%" height="80%"/></p>
  
-  
+    
 ## 2. 세계 최대의 낙서 데이터 세트(?)  
 + 많은 사용자가 게임을 진행하면서 얻어진 다양한 결과(낙서)를 볼 수 있습니다. 또한, 결과(낙서)를 오픈 소스로 공유합니다.  
 
@@ -36,7 +36,8 @@ tags:
 
 <p align="center"><img src = "https://user-images.githubusercontent.com/47412229/194263135-d4704c56-8ca3-40bb-8f02-1e45aecfb0b4.png" width="80%" height="80%"/></p>  
 [Dataset](https://github.com/googlecreativelab/quickdraw-dataset)  
-
+  
+  
 ## 3. quickdraw API 따라하기  
 [참고 : quickdraw API](https://quickdraw.readthedocs.io/en/latest/)
 
