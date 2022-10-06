@@ -48,3 +48,15 @@ pip install quickdraw
 ```
 ![image](https://user-images.githubusercontent.com/47412229/194273702-96973813-deda-4fbe-8f67-b842fca9b89e.png)
     
++ 고양이 낙서 가져오기  
+
+```
+from quickdraw import QuickDrawData
+qd = QuickDrawData()
+cat = qd.get_drawing("cat")
+
+print(cat)
+
+```
+`get_drawing(name, index)` 도면(낙서)을 가져옵니다. name(string)은 가져올 도면(낙서)의 이름(cat, airplane 등)이며 index(int)는 가져올 도면의 인덱스입니다.  
+
