@@ -9,6 +9,8 @@ categories:
 tags:
   - QUICK, DRAW!
   - 퀵, 드로우!
+  - python
+  - 파이썬
 ---
 
 # 퀵, 드로우!(QUICK, DRAW!) 소개  
