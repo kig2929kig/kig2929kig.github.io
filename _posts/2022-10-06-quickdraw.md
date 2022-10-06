@@ -42,9 +42,9 @@ tags:
   
   
 ## 3. quickdraw API 따라하기  
-[참고 : quickdraw API](https://quickdraw.readthedocs.io/en/latest/)
+[참고 : quickdraw API](https://quickdraw.readthedocs.io/en/latest/)  
 
-### 3-1. pip를 사용하여 파이썬 라이브러리 설치  
+### 3-1. pip를 사용하여 파이썬 라이브러리 설치    
 
 ```
 pip install quickdraw
@@ -52,6 +52,7 @@ pip install quickdraw
 ![image](https://user-images.githubusercontent.com/47412229/194273702-96973813-deda-4fbe-8f67-b842fca9b89e.png)
     
 ### 3-2. 고양이 낙서 가져오기  
+  
 
 ```
 from quickdraw import QuickDrawData
@@ -66,6 +67,7 @@ print(cat)
 소스 코드 실행 결과는 `QuickDrawing key_id=4827440083894272`입니다. 고양이에 대한 key_id 값을 보여주며 실행할 때마다 key_id 값이 달라지는 것을 알 수 있습니다. 즉, 랜덤하게 고양이 도면(낙서)을 가지고 오는 것을 알 수 있습니다. key_id는 모든 도면(낙서)의 고유 식별자입니다.   
 
 ### 3-3. 도면(낙서)의 모든 속성 출력하기  
+ 
 
 ```
 print(cat.name)
@@ -89,7 +91,8 @@ print(cat.strokes)
 ![image](https://user-images.githubusercontent.com/47412229/194285826-96470262-0220-441d-913d-35c3f26b2496.png)
   
   
-### 3-4. 도면(낙서) 저장하기  
+### 3-4. 도면(낙서) 저장하기   
+
 
 ```
 cat.image.save("my_cat.gif")
@@ -99,6 +102,7 @@ cat.image.save("my_cat.gif")
 ![image](https://user-images.githubusercontent.com/47412229/194287774-3a4091e3-3225-4b0d-acba-dd6a082ec860.png)
 
 ### 3-5. 도면(낙서) 보기  
+ 
 
 ```
 cat.image.show()
