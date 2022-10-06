@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "퀵, 드로우! 소개"
+title: "퀵, 드로우! 소개(1)"
 classes: wide
 toc : true
 toc_sticky: true
