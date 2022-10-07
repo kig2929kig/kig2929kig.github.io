@@ -19,8 +19,8 @@ tags:
 
 ![image](https://user-images.githubusercontent.com/47412229/194256670-bfe7cc4a-da88-4563-91a3-d53ad99336d8.png)  
 
-[참고 : QUICK, DRAW!](https://quickdraw.withgoogle.com/)  
-[유튜브](https://youtu.be/X8v1GWzZYJ4)
+[참고 : QUICK, DRAW!](https://quickdraw.withgoogle.com/){:target="_blank"}    
+[유튜브](https://youtu.be/X8v1GWzZYJ4){:target="_blank"}  
 
 
 ## 1. 게임하기  
@@ -38,11 +38,11 @@ tags:
 비행기(airplane)를 클릭해 보면 비행기에 대한 다양한 그림을 볼 수 있습니다. 또한, 비행기라고 생각되지 않는 그림을 클릭하면 그림에 대한 정보(날짜, 나라)가 보이고 부적절하다고 판단된다면 제보할 수 있습니다.   
 
 ![image](https://user-images.githubusercontent.com/47412229/194263135-d4704c56-8ca3-40bb-8f02-1e45aecfb0b4.png)
-[Dataset](https://github.com/googlecreativelab/quickdraw-dataset)  
+[Dataset](https://github.com/googlecreativelab/quickdraw-dataset){:target="_blank"}    
   
   
 ## 3. quickdraw API 따라하기  
-[참고 : quickdraw API](https://quickdraw.readthedocs.io/en/latest/)  
+[참고 : quickdraw API](https://quickdraw.readthedocs.io/en/latest/){:target="_blank"}    
 
 ### 3-1. pip를 사용하여 파이썬 라이브러리 설치    
 
@@ -85,7 +85,8 @@ print(cat.strokes)
 `recognized` 도면이 인식되었는지 여부를 나타내며 반환값은 부울(True, False)값입니다.  
 `timestamp` 도면이 작성된 시간(초)을 반환합니다.  
 `no_of_strokes` 도면을 만드는 데 사용되는 펜 스트로크 수를 반환합니다.  
-`image_data` 원시 이미지 데이터를 X좌표 목록과 Y좌표 목록이 있는 획 목록으로 반환합니다.([이미지 데이터 표시 방식](https://github.com/googlecreativelab/quickdraw-dataset#simplified-drawing-files-ndjson))       
+`image_data` 원시 이미지 데이터를 X좌표 목록과 Y좌표 목록이 있는 획 목록으로 반환합니다.([이미지 데이터 표시 방식](https://github.com/googlecreativelab/quickdraw-dataset#simplified-drawing-files-ndjson)){:target="_blank"}  
+
 `strokes` 도면을 구성하는 (x,y) 좌표 목록이 포함된 펜 선 목록을 반환합니다.    
 
 ![image](https://user-images.githubusercontent.com/47412229/194285826-96470262-0220-441d-913d-35c3f26b2496.png)
