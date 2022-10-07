@@ -14,14 +14,14 @@ tags:
 
 # Github pages 블로그 만들기
 지킬(Jekyll)은 정적 사이트 생성기로 일반 텍스트를 정적 웹사이트 및 블로그로 변환합니다. Github Pages는 Jekyll을 기반으로 무료로 Gihub를 사용하여 사이트를 배포할 수 있습니다.  
-[공식 홈페이지](https://jekyllrb.com/)   
+[공식 홈페이지](https://jekyllrb.com/){:target="_blank"}     
 
 ***
 
 # 지킬(Jekyll) 테마
 Jekyll 테마는 다른 사용자들이 이미 구성해서 배포한 template이며, 많은 무료 template이 공개되어 있습니다. 무료 테마들 중에서 인기있는 Minimal Mistakes 테마를 적용해서 블로그를 만들어 봅시다.  
 
-[Github minimal Mistakes 템플릿](https://github.com/mmistakes/minimal-mistakes)  
+[Github minimal Mistakes 템플릿](https://github.com/mmistakes/minimal-mistakes){:target="_blank"}    
 
 ***
 
@@ -45,7 +45,7 @@ fork한 repository 명칭을 **(본인의 github 계정이름).github.io** 로 �
 ```
 minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 ```   
-[테마 스킨 목록](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#skin)  
+[테마 스킨 목록](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#skin){:target="_blank"}    
 
 ![image](https://user-images.githubusercontent.com/47412229/193731715-a2c42622-5826-49cf-a21a-be02d9f41a6e.png)
 
@@ -114,7 +114,7 @@ avatar : "/assets/images/그림파일.jpg"
 
 `/_posts/` 폴더를 만들고 폴더 안에 포스팅할 파일을 작성하면 됩니다. 예) 2022-10-04-firtst_posting.md  
 확장자는 .md 로 마크다운 언어를 사용하여 작성합니다. 마크다운 언어에 대한 사용법은 아래 링크를 참조하세요.  
-[마크다운 가이드](/Markdown)
+[마크다운 가이드](/Markdown){:target="_blank"}  
 
 ![image](https://user-images.githubusercontent.com/47412229/193743267-6a48645a-ce95-43ce-bc76-45bfe10de48f.png)  
 
@@ -125,7 +125,7 @@ title: "깃허브 페이지 만들기"
 ---
 ```
 포스팅 레이아웃은 기본적으로 `single` 이며 다양한 레이아웃이 있습니다. 관련 문서는 아래 링크를 참조하세요.  
-[POST 레이아웃](https://mmistakes.github.io/minimal-mistakes/docs/layouts/)  
+[POST 레이아웃](https://mmistakes.github.io/minimal-mistakes/docs/layouts/){:target="_blank"}    
 
 `title : "POST 제목"` 블로그에 포스팅한 제목을 설정합니다.  
 
