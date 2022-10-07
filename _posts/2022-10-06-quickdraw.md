@@ -85,8 +85,8 @@ print(cat.strokes)
 `recognized` 도면이 인식되었는지 여부를 나타내며 반환값은 부울(True, False)값입니다.  
 `timestamp` 도면이 작성된 시간(초)을 반환합니다.  
 `no_of_strokes` 도면을 만드는 데 사용되는 펜 스트로크 수를 반환합니다.  
-`image_data` 원시 이미지 데이터를 X좌표 목록과 Y좌표 목록이 있는 획 목록으로 반환합니다.([이미지 데이터 표시 방식](https://github.com/googlecreativelab/quickdraw-dataset#simplified-drawing-files-ndjson)){:target="_blank"}  
-
+`image_data` 원시 이미지 데이터를 X좌표 목록과 Y좌표 목록이 있는 획 목록으로 반환합니다.  
+[이미지 데이터 표시 방식](https://github.com/googlecreativelab/quickdraw-dataset#simplified-drawing-files-ndjson){:target="_blank"}    
 `strokes` 도면을 구성하는 (x,y) 좌표 목록이 포함된 펜 선 목록을 반환합니다.    
 
 ![image](https://user-images.githubusercontent.com/47412229/194285826-96470262-0220-441d-913d-35c3f26b2496.png)
