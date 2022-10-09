@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://kig2929kig.github.io/sitemap.xml
