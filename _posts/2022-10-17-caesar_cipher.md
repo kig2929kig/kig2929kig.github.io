@@ -1,8 +1,3 @@
-```python
-from google.colab import drive
-drive.mount("/content/drive")
-!jupyter nbconvert --to markdown "/content/drive/MyDrive/Colab Notebooks/caesar_cipher.ipynb"
-```
 
 # 카이사르 암호 (Caesar cipher)
 카이사르 암호 또는 시저 암호는 암호학에서 가장 간단하고 널리 알려진 암호화 기술 중 하나입니다. 
