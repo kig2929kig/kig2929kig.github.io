@@ -1,3 +1,15 @@
+---
+layout: single
+title: "[python] 카이사르 암호 만들기"
+classes: wide
+toc : true
+toc_sticky: true
+categories:
+  - python project
+tags:
+  - python
+  - 파이썬
+---
 
 # 카이사르 암호 (Caesar cipher)
 카이사르 암호 또는 시저 암호는 암호학에서 가장 간단하고 널리 알려진 암호화 기술 중 하나입니다. 
