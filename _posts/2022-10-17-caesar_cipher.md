@@ -70,3 +70,61 @@ for p in plain_text :
     passwd = passwd + chr(temp+65)
 print(passwd)
 ```
+
+## 3. 카이사르 암호 해킹  
+
+```python
+ALPHABET = {'A':0, 'B':1, 'C':2, 'D':3, 'E':4, 'F':5, 'G':6, 'H':7, 'I':8, 'J':9, 'K':10, 
+            'L':11, 'M':12, 'N':13, 'O': 14, 'P':15, 'Q':16, 'R':17, 'S':18, 'T':19, 'U':20, 
+            'V':21, 'W':22, 'X':23, 'Y':24, 'Z':25}
+
+def caesar_cipher_hacking(key) :
+  plain_text = ""
+  for p in passwd :
+    if p == " " :
+      plain_text = plain_text  + " "
+    else :
+      plain_text = plain_text + (list(ALPHABET.keys())[ (ALPHABET.get(p)-key)%26 ])
+  
+  return plain_text
+
+print(">> 카이사르 암호 해킹 <<")
+passwd = input("암호문을 입력하세요 : ")
+passwd = passwd.upper()
+
+
+for key in range(0, 26) :
+  print(key, "key :", caesar_cipher_hacking(key))
+
+
+```  
+
+    >> 카이사르 암호 해킹 <<
+    암호문을 입력하세요 : EH FDUHIXO IRU DVVDVVLQDWRU
+    0 key : EH FDUHIXO IRU DVVDVVLQDWRU
+    1 key : DG ECTGHWN HQT CUUCUUKPCVQT
+    2 key : CF DBSFGVM GPS BTTBTTJOBUPS
+    3 key : BE CAREFUL FOR ASSASSINATOR  
+    4 key : AD BZQDETK ENQ ZRRZRRHMZSNQ
+    5 key : ZC AYPCDSJ DMP YQQYQQGLYRMP
+    6 key : YB ZXOBCRI CLO XPPXPPFKXQLO
+    7 key : XA YWNABQH BKN WOOWOOEJWPKN
+    8 key : WZ XVMZAPG AJM VNNVNNDIVOJM
+    9 key : VY WULYZOF ZIL UMMUMMCHUNIL
+    10 key : UX VTKXYNE YHK TLLTLLBGTMHK
+    11 key : TW USJWXMD XGJ SKKSKKAFSLGJ
+    12 key : SV TRIVWLC WFI RJJRJJZERKFI
+    13 key : RU SQHUVKB VEH QIIQIIYDQJEH
+    14 key : QT RPGTUJA UDG PHHPHHXCPIDG
+    15 key : PS QOFSTIZ TCF OGGOGGWBOHCF
+    16 key : OR PNERSHY SBE NFFNFFVANGBE
+    17 key : NQ OMDQRGX RAD MEEMEEUZMFAD
+    18 key : MP NLCPQFW QZC LDDLDDTYLEZC
+    19 key : LO MKBOPEV PYB KCCKCCSXKDYB
+    20 key : KN LJANODU OXA JBBJBBRWJCXA
+    21 key : JM KIZMNCT NWZ IAAIAAQVIBWZ
+    22 key : IL JHYLMBS MVY HZZHZZPUHAVY
+    23 key : HK IGXKLAR LUX GYYGYYOTGZUX
+    24 key : GJ HFWJKZQ KTW FXXFXXNSFYTW
+    25 key : FI GEVIJYP JSV EWWEWWMREXSV  
+    
