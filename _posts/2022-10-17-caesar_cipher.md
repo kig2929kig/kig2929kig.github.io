@@ -59,7 +59,7 @@ print("암호문 :", crypto_text)
 #print(ord('Z'))
 key = 20
 passwd = ""
-plain_text = input('암호문을 입력하세요 : ')
+plain_text = input('평문을 입력하세요 : ')
 plain_text = plain_text.upper()
 for p in plain_text :
   if p == " " :
