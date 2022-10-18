@@ -20,7 +20,7 @@ tags:
 
 
     텍스트 : A B C D E F G H I J K L M N O P Q R S T U V W X Y Z    
-    Key : 4  
+    Key : 5  
     암호문 : F G H I J K L M N O P Q R S T U V W X Y Z A B C D E 
 
 암살 위기에 처한 카이사르에게 가족들이 암호문을 보냈는데, 암호문은  "EH FDUHIXO IRU DVVDVVLQDWRU" 입니다. 이 암호문의 뜻은 "BE CAREFUL FOR ASSASSINATOR" 이며, 여기서 key는 3으로 원래의 알파벳을 일정한 간격(key=3)으로 이동시키면 암호문이 됩니다.
