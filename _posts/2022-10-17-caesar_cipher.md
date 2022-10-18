@@ -25,7 +25,7 @@ tags:
 
 암살 위기에 처한 카이사르에게 가족들이 암호문을 보냈는데, 암호문은  "EH FDUHIXO IRU DVVDVVLQDWRU" 입니다. 이 암호문의 뜻은 "BE CAREFUL FOR ASSASSINATOR" 이며, 여기서 key는 3으로 원래의 알파벳을 일정한 간격(key=3)으로 이동시키면 암호문이 됩니다.
 
-## 딕셔너리를 이용한 방법
+## 1. 딕셔너리를 이용한 방법
 
 ```python
 ALPHABET = {'A':0, 'B':1, 'C':2, 'D':3, 'E':4, 'F':5, 'G':6, 'H':7, 'I':8, 'J':9, 'K':10, 
@@ -52,7 +52,7 @@ print("암호문 :", crypto_text)
     평문을 입력하세요 : BE CAREFUL FOR ASSASSINATOR
     암호문 : EH FDUHIXO IRU DVVDVVLQDWRU
 
-## 아스키 코드 값을 이용한 방법
+## 2. 아스키 코드 값을 이용한 방법
 
 ```python
 #print(chr(65)) # A(65) ~ Z(90)
