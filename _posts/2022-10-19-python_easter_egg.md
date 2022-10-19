@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 파니썬 이스트 에그 - "파이썬의 선(禪)"
+title: 파이썬 이스트 에그 - "파이썬의 선(禪)"
 classes: wide
 categories:
   - 잠시,멈춤
