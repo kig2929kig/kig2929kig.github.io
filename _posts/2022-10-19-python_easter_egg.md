@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 파이썬 이스트 에그 - "파이썬의 선(禪)"
+title: 파이썬 이스터 에그(Easter egg)
 classes: wide
 categories:
   - 잠시,멈춤
@@ -53,6 +53,7 @@ Namespaces are one honking great idea -- let's do more of those!
 
 Python 설계에 대한 기본 원칙을 20개의 격언으로 간결하게 표현했으며 그 중 19개만 기록되었다고 합니다. 
 
+파이썬 디자인 원리와 철학들의 목록인데, 언어를 이해하고 사용하는 데 도움이 됩니다.
 
 
 
