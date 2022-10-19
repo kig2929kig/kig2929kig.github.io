@@ -50,6 +50,8 @@ Namespaces are one honking great idea -- let's do more of those!
 
 파이썬 디자인 원리와 철학들의 목록인데, 언어를 이해하고 사용하는 데 도움이 됩니다. Python 설계에 대한 기본 원칙을 20개의 격언으로 간결하게 표현했으며 그 중 19개만 기록되었다고 합니다. 
 어쨌든 재미있는 이스터 에그(?)입니다. 참고로 이스터 에그(Easter Egg)는 숨겨진 메시지를 뜻합니다.
+  
+목록을 작성한 Tim Peters는 Timsort 하이브리드 정렬 알고리즘을 만들고 Python 프로그래밍 언어 구현에 크게 기여한 것으로 알려진 미국 소프트웨어 개발자입니다. [위키백과](https://en.m.wikipedia.org/wiki/Tim_Peters_(software_engineer))
 
 
 
