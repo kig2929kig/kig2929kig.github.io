@@ -1,3 +1,12 @@
+---
+layout: single
+title: "[자료구조] 재귀 함수"
+classes: wide
+categories:
+  - Data Structure
+---
+
+
 # 재귀(recursion)
 > 어떤한 것을 정의할 때 자기 자신을 참조하는 것. 함수가 자신의 정의에 의해 정의될 때의 개념.
 
