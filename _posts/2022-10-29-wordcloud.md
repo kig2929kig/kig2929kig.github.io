@@ -1,20 +1,29 @@
+---
+layout: single
+title: "[python] 워드 클라우드"
+classes: wide
+toc : true
+toc_sticky: true
+categories:
+  - python project
+---
+
+# 코랩 ipynb -> md 변환
 ```python
 from google.colab import drive
 drive.mount("/content/drive")
 !jupyter nbconvert --to markdown "/content/drive/MyDrive/Colab Notebooks/wordcloud.ipynb"
 ```
 
+# 코랩 - 나눔 폰트 설치
 
 ```python
 !sudo apt-get install -y fonts-nanum
-```
-
-
-```python
 !sudo fc-cache -fv
 !rm ~/.cache/matplotlib -rf
 ```
 
+# 워드 클라우드 소스 코드
 
 ```python
 !pip install wordcloud
@@ -32,15 +41,7 @@ from konlpy.tag import Twitter
 from collections import Counter
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-```
 
-
-```python
-
-```
-
-
-```python
 search_word = "안산공업고등학교"
 start_num = 1
 title_list = []
@@ -99,9 +100,4 @@ def make_wordcloud(word_count) :
 make_wordcloud(10)
 ```
 
-    {'안산': 46, '대회': 46, '안산공고': 38, '학교': 33, '학생': 32, '공업고등학교': 30, '전국': 27, '제': 24, '안산시': 23, '대통령': 22}
-
-
-
-![png](wordcloud_files/wordcloud_6_1.png)
 
