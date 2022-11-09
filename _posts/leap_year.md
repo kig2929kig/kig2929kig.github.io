@@ -1,0 +1,113 @@
+```python
+from google.colab import drive
+drive.mount("/content/drive")
+!jupyter nbconvert --to markdown "/content/drive/MyDrive/Colab Notebooks/leap_year.ipynb"
+```
+
+# 윤년
+
++ 지구가 태양주위를 한 바뀌 도는데(공전), 걸리는 시간은 365일 5시간 48분이 걸립니다.
++ 4년이면 이 시간이 쌓여서 약 하루가 됩니다.
++ 그래서 하루를 추가하는 달이 있고 이 달에 추가한 하루를 윤일, 이 해를 윤년이라고 부릅니다.
++ 윤일은 2월 말에 추가하여 윤년의 2월은 29일까지 있습니다.
++ 참고로 윤초도 있습니다. 시간의 개념
+  * 태양시 : 태양의 자전주기를 기준
+  * 원자시 : 세슘원자의 진동수를 기준
+  * 지구의 자전이 불규칙할때가 있어서 태양시와 원자시가 같지 않게되는 현상이 있고 두 시간의 편차를 좁히기 위해 더하거나 빼는데 이를 윤초라고 합니다.
+
++ 참고 (https://learn.microsoft.com/ko-kr/office/troubleshoot/excel/determine-a-leap-year)
+
+
+```python
+# 평년인지, 윤년인지 판별하는 프로그램
+# 윤년 규칙
+# 1. 4로 나누어 떨어지는 해는 윤년
+# 2. 4, 100으로 나누어 떨어지는 해는 평년
+# 3. 4, 100, 400으로 나누어 떨어지는 해는 윤년
+
+year = int(input("년도를 입력 : "))
+if year % 4 == 0 :
+  if year % 100 == 0 :
+    if year % 400 == 0 :
+      print('윤년')
+    else :
+      print('평년')
+  else :
+    print("윤년")
+else :
+  print('평년')
+```
+
+    년도를 입력 : 1600
+    윤년
+
+
+
+```python
+#1~7월 중 짝수 달은 30일, 홀수 달은 31일
+#8~12월 중 짝수 달은 31일, 홀수 달은 30일
+#2월의 윤년은 고려하지 않음.
+n = int(input("월을 입력 : "))
+
+if n == 2 :
+    print(28)
+elif n <= 7 :
+    if n%2 == 1 :
+        print(31)
+    else :
+        print(30)
+else :
+    if n%2 == 0:
+        print(31)
+    else :
+        print(30)
+```
+
+    월을 입력 : 11
+    30
+
+
+## 년도와 월을 입력받아서 그 달의 일수를 계산하는 프로그램을 작성.
+
+
+```python
+def leap_year (year) :
+  
+  if year % 4 == 0 :
+    if year % 100 == 0 :
+      if year % 400 == 0 :
+        return '윤년'
+      else :
+        return '평년'
+    else :
+      return "윤년"
+  else :
+    return '평년'
+
+def days(n) :
+  if n == 2 :
+    if leap_year (year) == '평년' :
+      return 28
+    else :
+      return 29
+  elif n <= 7 :
+    if n%2 == 1 :
+        return 31
+    else :
+        return 30
+  else :
+    if n%2 == 0:
+        return 31
+    else :
+        return 30
+
+year, day = input().split(" ")
+year = int(year)
+day = int(day)
+
+print("{0}으로 {1}월은 {2}까지입니다.".format(leap_year(year), day, days(day)))
+```
+
+    2022 2
+    평년으로 2월은 28까지입니다.
+
