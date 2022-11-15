@@ -7,7 +7,7 @@ categories:
 ---
 
 # TTS와 STT를 이용한 인공지능 스피커 만들기
-+ TTS와 STT, BeautifulSop을 이용하여 인공지능 스피커 흉내 내기
++ TTS와 STT, BeautifulSoup을 이용하여 인공지능 스피커 흉내 내기
 
 
 ```python
