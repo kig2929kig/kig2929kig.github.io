@@ -22,27 +22,7 @@ html = pd.read_html(url)
 #html 
 html[4] #url 문서의 4번째 인덱스 테이블 가져오기
 ```
-
-
-
-
-
-  <div id="df-d5bf4ceb-fe44-457b-aadd-348f066eff31">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
+ 
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -194,85 +174,6 @@ html[4] #url 문서의 4번째 인덱스 테이블 가져오기
   </tbody>
 </table>
 <p>97 rows × 9 columns</p>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d5bf4ceb-fe44-457b-aadd-348f066eff31')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-d5bf4ceb-fe44-457b-aadd-348f066eff31 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d5bf4ceb-fe44-457b-aadd-348f066eff31');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
 
 
 ```python
@@ -282,25 +183,6 @@ birth_death_statistics
 ```
 
 
-
-
-
-  <div id="df-645ff4a1-14f2-416a-a0f3-6a265d2a31b2">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -452,84 +334,6 @@ birth_death_statistics
   </tbody>
 </table>
 <p>97 rows × 9 columns</p>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-645ff4a1-14f2-416a-a0f3-6a265d2a31b2')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-645ff4a1-14f2-416a-a0f3-6a265d2a31b2 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-645ff4a1-14f2-416a-a0f3-6a265d2a31b2');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
 
 
 ## 한글 폰트 설정
@@ -559,14 +363,7 @@ sns.pointplot(data=birth_death_statistics, x="연도 (년)", y="추계인구(명
 ```
 
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f30d4e98190>
-
-
-
-
-![png](pandas6_files/pandas6_7_1.png)
+![image](https://user-images.githubusercontent.com/47412229/203223683-f619c197-bc91-4028-b182-ad095fa58a6a.png)
 
 
 
@@ -576,16 +373,7 @@ plt.xticks(rotation=60)
 sns.lineplot(data=birth_death_statistics, x="연도 (년)", y="추계인구(명)")
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f30c4acf650>
-
-
-
-
-![png](pandas6_files/pandas6_8_1.png)
-
+![image](https://user-images.githubusercontent.com/47412229/203223810-7ed9cf10-91c7-4e10-b9f0-6bd659a82272.png)
 
 
 ```python
@@ -594,16 +382,7 @@ plt.xticks(rotation=60)
 sns.pointplot(data=birth_death_statistics, x="연도 (년)", y="출생자수(명)")
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f30c4d63cd0>
-
-
-
-
-![png](pandas6_files/pandas6_9_1.png)
-
+![image](https://user-images.githubusercontent.com/47412229/203223935-cdd818f9-bc83-446a-a3d1-2da24dd81c7e.png)
 
  + y축의 의미 : 1e6 = 10**6
 
@@ -614,16 +393,7 @@ plt.xticks(rotation=60)
 sns.lineplot(data=birth_death_statistics, x="연도 (년)", y="사망자수(명)")
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f30c44c25d0>
-
-
-
-
-![png](pandas6_files/pandas6_11_1.png)
-
+![image](https://user-images.githubusercontent.com/47412229/203224054-c98c19b4-0ac3-4d90-9a46-9fd3bd3365c7.png)
 
 
 ```python
@@ -634,17 +404,7 @@ sns.lineplot(data=birth_death_statistics, x="연도 (년)", y="사망자수(명)
 
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f30c019fa50>
-
-
-
-
-![png](pandas6_files/pandas6_12_1.png)
-
-
+![image](https://user-images.githubusercontent.com/47412229/203224152-ecfeebf3-b373-4fb0-874b-e4b9dfc5a85b.png)
 
 ```python
 birth_death_statistics.columns
@@ -668,42 +428,13 @@ temp = temp.set_index('연도 (년)') # 연도 (년) 데이터를 x축으로 변
 temp.plot(figsize=(15,4))
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f30bfc6c050>
-
-
-
-
-![png](pandas6_files/pandas6_15_1.png)
-
+![image](https://user-images.githubusercontent.com/47412229/203224261-77434fef-4534-4e54-a1c7-544024fc7a3d.png)
 
 
 ```python
 temp
 ```
-
-
-
-
-
-  <div id="df-69980f17-f095-435c-b042-509d372cd4bf">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
+  
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -776,101 +507,13 @@ temp
   </tbody>
 </table>
 <p>97 rows × 2 columns</p>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-69980f17-f095-435c-b042-509d372cd4bf')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-69980f17-f095-435c-b042-509d372cd4bf button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-69980f17-f095-435c-b042-509d372cd4bf');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
 
 
 ```python
 #temp[-50:] #최근 50년
 temp[-50:].plot(figsize=(15,8))
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f30c1620290>
-
-
-
-
-![png](pandas6_files/pandas6_17_1.png)
+![image](https://user-images.githubusercontent.com/47412229/203224458-0b6a780e-e77c-4c0a-9062-8cb5a446183f.png)
 
 
 ## seaborn - barplot 만들기
@@ -883,16 +526,7 @@ plt.xticks(rotation=60)
 sns.barplot(data=birth_death_statistics, x="연도 (년)", y="추계인구(명)", palette="Blues")
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f30bf85fc10>
-
-
-
-
-![png](pandas6_files/pandas6_19_1.png)
-
+![image](https://user-images.githubusercontent.com/47412229/203224583-7d3ccdcc-5356-4073-8055-4327e65e24a7.png)
 
 
 ```python
@@ -901,16 +535,7 @@ plt.xticks(rotation=60)
 sns.pointplot(data=birth_death_statistics, x="연도 (년)", y="추계인구(명)", palette="Blues")
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f30c0d2bcd0>
-
-
-
-
-![png](pandas6_files/pandas6_20_1.png)
-
+![image](https://user-images.githubusercontent.com/47412229/203224631-f33f5843-a74f-4d67-ad9c-a0712fbb79dd.png)
 
 
 ```python
@@ -919,13 +544,5 @@ plt.xticks(rotation=60)
 sns.lineplot(data=birth_death_statistics, x="연도 (년)", y="추계인구(명)")
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f30c083f3d0>
-
-
-
-
-![png](pandas6_files/pandas6_21_1.png)
+![image](https://user-images.githubusercontent.com/47412229/203224671-82584d86-4a0e-4884-a2de-3aa6ac729865.png)
 
