@@ -8,6 +8,9 @@ categories:
 
 # Tic Tac Toe GUI  
 
+![image](https://user-images.githubusercontent.com/47412229/209776495-e44d18ce-675a-468f-8bd4-276b595ae05b.png)
+
+
 ```python
 
 from tkinter import *
