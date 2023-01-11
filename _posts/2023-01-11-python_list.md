@@ -1,8 +1,3 @@
-```python
-from google.colab import drive
-drive.mount("/content/drive")
-!jupyter nbconvert --to markdown "/content/drive/MyDrive/Colab Notebooks/list.ipynb"
-```
 
 # 파이썬 - 리스트(list)  
 
