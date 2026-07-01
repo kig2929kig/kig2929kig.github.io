@@ -4,6 +4,26 @@ permalink: /docs/configuration/
 excerpt: "Settings for configuring and customizing the theme."
 last_modified_at: 2021-05-11T10:40:42-04:00
 toc: true
+
+skins:
+  - name: air
+    description: Calm and blue.
+  - name: aqua
+    description: Just like water.
+  - name: contrast
+    description: Retro feel with bold blue links and inverted footer.
+  - name: dark
+    description: Inverted palette, white text on a dark background.
+  - name: dirt
+    description: Earthy tones.
+  - name: mint
+    description: Minty fresh green.
+  - name: neon
+    description: Inverted palette, white text on a dark background.
+  - name: plum
+    description: Purple reigns supreme.
+  - name: sunrise
+    description: Oranges and red.
 ---
 
 Settings that affect your entire site can be changed in [Jekyll's configuration file](https://jekyllrb.com/docs/configuration/): `_config.yml`, found in the root of your project. If you don't have this file you'll need to copy or create one using the theme's [default `_config.yml`](https://github.com/mmistakes/minimal-mistakes/blob/master/_config.yml) as a base.
@@ -31,92 +51,40 @@ Easily change the color scheme of the theme using one of the provided "skins":
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 ```
 
-**Note:** If you have made edits to the theme's CSS files be sure to update [`/assets/css/main.scss`](https://github.com/mmistakes/minimal-mistakes/blob/master/assets/css/main.scss) to include `@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin` before the `minimal-mistakes` import.
+**Note:** If you have made edits to the theme's CSS files be sure to update [`/assets/css/main.scss`](https://github.com/mmistakes/minimal-mistakes/blob/master/assets/css/main.scss) to include {% raw %}`@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin`{% endraw %} before the `minimal-mistakes` import.
 {: .notice--warning}
 
-#### Air skin: `air`
-
+{% for skin in page.skins %}
+#### {{ skin.name | capitalize }} skin: `{{ skin.name }}`
 {:.no_toc}
 
 <figure class="half">
-    <a href="{{ site.baseurl }}/assets/images/air-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/air-skin-archive.png"></a>
-    <a href="{{ site.baseurl }}/assets/images/air-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/air-skin-post.png"></a>
-    <figcaption>Calm and blue.</figcaption>
+  <a href="{{ skin.name | prepend: "/assets/images/" | append: "-skin-archive-large.png" | relative_url }}">
+    <img
+      src="{{ skin.name | prepend: "/assets/images/" | append: "-skin-archive.png" | relative_url }}"
+      alt="Archive page of {{ skin.name | capitalize }} skin"
+      />
+  </a>
+  <a href="{{ skin.name | prepend: "/assets/images/" | append: "-skin-post-large.png" | relative_url }}">
+    <img
+      src="{{ skin.name | prepend: "/assets/images/" | append: "-skin-post.png" | relative_url }}"
+      alt="Posts page of {{ skin.name | capitalize }} skin"
+      />
+  </a>
+  <figcaption>{{ skin.description }}</figcaption>
 </figure>
-
-#### Aqua skin: `aqua`
-
-<figure class="half">
-  <a href="{{ site.baseurl }}/assets/images/aqua-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/aqua-skin-archive.png"></a>
-  <a href="{{ site.baseurl }}/assets/images/aqua-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/aqua-skin-post.png"></a>
-  <figcaption>Just like water.</figcaption>
-</figure>
-
-#### Contrast skin: `contrast`
-
-<figure class="half">
-  <a href="{{ site.baseurl }}/assets/images/contrast-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/contrast-skin-archive.png"></a>
-  <a href="{{ site.baseurl }}/assets/images/contrast-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/contrast-skin-post.png"></a>
-  <figcaption>Retro feel with bold blue links and inverted footer.</figcaption>
-</figure>
-
-#### Dark skin: `dark`
-
-<figure class="half">
-  <a href="{{ site.baseurl }}/assets/images/dark-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/dark-skin-archive.png"></a>
-  <a href="{{ site.baseurl }}/assets/images/dark-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/dark-skin-post.png"></a>
-  <figcaption>Inverted palette, white text on a dark background.</figcaption>
-</figure>
-
-#### Dirt skin: `dirt`
-
-<figure class="half">
-  <a href="{{ site.baseurl }}/assets/images/dirt-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/dirt-skin-archive.png"></a>
-  <a href="{{ site.baseurl }}/assets/images/dirt-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/dirt-skin-post.png"></a>
-  <figcaption>Earthy tones.</figcaption>
-</figure>
-
-#### Mint skin: `mint`
-
-{:.no_toc}
-
-<figure class="half">
-  <a href="{{ site.baseurl }}/assets/images/mint-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/mint-skin-archive.png"></a>
-  <a href="{{ site.baseurl }}/assets/images/mint-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/mint-skin-post.png"></a>
-  <figcaption>Minty fresh green.</figcaption>
-</figure>
-
-#### Neon skin: `neon`
-
-<figure class="half">
-  <a href="{{ site.baseurl }}/assets/images/neon-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/neon-skin-archive.png"></a>
-  <a href="{{ site.baseurl }}/assets/images/neon-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/neon-skin-post.png"></a>
-  <figcaption>Inverted palette, white text on a dark background.</figcaption>
-</figure>
-
-#### Neon skin: `plum`
-
-<figure class="half">
-  <a href="{{ site.baseurl }}/assets/images/plum-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/plum-skin-archive.png"></a>
-  <a href="{{ site.baseurl }}/assets/images/plum-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/plum-skin-post.png"></a>
-  <figcaption>Purple reigns supreme.</figcaption>
-</figure>
-
-#### Sunrise skin: `sunrise`
-
-<figure class="half">
-  <a href="{{ site.baseurl }}/assets/images/sunrise-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/sunrise-skin-archive.png"></a>
-  <a href="{{ site.baseurl }}/assets/images/sunrise-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/sunrise-skin-post.png"></a>
-  <figcaption>Oranges and red.</figcaption>
-</figure>
+{% endfor %}
 
 ### Site locale
 
 `site.locale` is used to declare the primary language for each web page within the site.
 
-_Example:_ `locale: "en-US"` sets the `lang` attribute for the site to the _United States_ flavor of English, while `en-GB` would be for the `United Kingdom` style of English. Country codes are optional and the shorter variation `locale: "en"` is also acceptable. To find your language and country codes check this [reference table](<https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx>).
+_Example:_ `locale: "en-US"` sets the `lang` attribute for the site to the _United States_ flavor of English, while `en-GB` would be for the _United Kingdom_ style of English. Country codes are optional and the shorter variation `locale: "en"` is also acceptable. To find your language and country codes check this [reference table](<https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx>).
 
 Properly setting the locale is important for associating localized text found in the [**UI Text**]({{ "/docs/ui-text/" | relative_url }}) data file. An improper match will cause parts of the UI to disappear (eg. button labels, section headings, etc).
+
+**Note:** Localization can also be overridden per page by specifying `locale` in the front matter.
+{: .notice--info}
 
 **Note:** The theme comes with localized text in English (`en`, `en-US`, `en-GB`). If you change `locale` in `_config.yml` to something else, most of the UI text will go blank. Be sure to add the corresponding locale key and translated text to `_data/ui-text.yml` to avoid this.
 {: .notice--warning}
@@ -131,7 +99,7 @@ You also have the option of customizing the separation character used in SEO-fri
 
 _Example:_ `title_separator: "|"` would produce page titles like `Sample Page | My Awesome Site`.
 
-**Note:** Long site titles have been known to break the masthead layout. Avoid adding a long "tagline" to the title prevent this from happening eg. `My Awesome Site is the Best Because I Say So`.
+**Note:** Long site titles have been known to break the masthead layout. Avoid adding a long "tagline" to the title to prevent this from happening, e.g. `My Awesome Site is the Best Because I Say So`.
 {: .notice--warning}
 
 ### Site subtitle
@@ -157,7 +125,7 @@ _Example:_ `description: "A flexible Jekyll theme for your blog or site with a m
 
 ### Site URL
 
-The base hostname and protocol for your site. If you're hosting with GitHub Pages this will be something like `url: "https://mmistakes.github.io"` or `url: "https://mademistakes.com"` if you have a custom domain name.
+The base hostname and protocol for your site. If you're hosting on GitHub Pages this will be something like `url: "https://mmistakes.github.io"` or `url: "https://mademistakes.com"` if you have a custom domain name.
 
 GitHub Pages now [forces `https://` for new sites](https://help.github.com/articles/securing-your-github-pages-site-with-https/) so be mindful of that when setting your URL to avoid mixed-content warnings.
 
@@ -183,9 +151,9 @@ Add your repository name with organization to your site's configuration file, `_
 repository: "username/repo-name"
 ```
 
-"NWO" stands for "name with owner." It is GitHub lingo for the username of the owner of the repository plus a forward slash plus the name of the repository, e.g. `mmistakes/minimal-mistakes`, where **mmistakes** is the owner and **minimal-mistakes** is the repository name.
+"NWO" stands for "**n**ame **w**ith **o**wner." It is GitHub lingo for the username of the owner of the repository plus a forward slash plus the name of the repository, e.g. `mmistakes/minimal-mistakes`, where **mmistakes** is the owner and **minimal-mistakes** is the repository name.
 
-Your `site.github.*` fields should fill in like normal. If you run Jekyll with the --verbose flag, you should be able to see all the API calls made.
+Your `site.github.*` fields should be filled in like normal. If you run Jekyll with the `--verbose` flag, you should be able to see all the API calls made.
 
 If you don't set `repository` correctly you may see the following error when trying to `serve` or `build` your Jekyll site:
 
@@ -250,6 +218,12 @@ By default your site title is used in the masthead. You can override this text b
 masthead_title: "My Custom Title"
 ```
 
+### Site direction
+
+`site.direction` is used to sets the direction of the page. This option can be used for RTL languages (like Arabic, Persian, etc)
+
+_Example:_ `direction: rtl` sets the direction of the page to right to left. By default this option is `direction: ltr`.
+
 ### Breadcrumb navigation (beta)
 
 Enable breadcrumb links to help visitors better navigate deep sites. Because of the fragile method of implementing them they don't always produce accurate links reliably. For best results:
@@ -285,11 +259,13 @@ defaults:
 
 To disable post date for a post, add `show_date: false` to its YAML Front Matter, overriding what was set in `_config.yml`.
 
-When dates are shown on blog posts or pages, a date format will be chosen to format the date string. The default format is `"%B %-d, %Y"`, which will be displayed like "February 24, 2016". You can choose your date format by referencing this [cheat sheet](https://www.shortcutfoo.com/app/dojos/ruby-date-format-strftime/cheatsheet). For example, use your date format in `_config.yml`.
+When dates are shown on blog posts or pages, a date format will be chosen to format the date string. The default format is `"%B %-d, %Y"`, which will be displayed like "February 24, 2016". You can choose your date format by referencing this [cheat sheet](https://www.shortcutfoo.com/app/dojos/ruby-date-format-strftime/cheatsheet). For example, to use ISO 8601 style dates, use this date format:
 
 ```yaml
 date_format: "%Y-%m-%d"
 ```
+
+You can set a custom `date_format` for the entire site as a top-level entry in `_config.yml`. You can override the site's `date_format` for a specific post by putting it in the YAML Front Matter, or for groups of posts in the `_config.yml` defaults (just like you can with `show_date`).
 
 ### Reading time
 
@@ -311,7 +287,7 @@ defaults:
 
 To disable reading time for a post, add `read_time: false` to its YAML Front Matter to override what was set in `_config.yml`.
 
-`words_per_minute` can also be adjusted per-page basis by adding to its YAML Front Matter. This is useful for sites with multi-lingual content where you'd like specify a different value from the site config.
+`words_per_minute` can also be adjusted on a per-page basis by adding to its YAML Front Matter. This is useful for sites with multi-lingual content where you'd like specify a different value from the site config.
 
 ```yaml
 words_per_minute: 250
@@ -330,6 +306,32 @@ For example,
   padding-right: 0.5em;
 }
 ```
+
+### Code block copy button
+
+*New in v4.26.0*
+
+To enable a copy button on code blocks, add the following to `_config.yml`:
+
+```yaml
+enable_copy_code_button: true
+```
+
+When enabled site-wide, the button can be disabled on individual code blocks by adding `no-copy` to the code block's class list.
+
+````markdown
+```
+Hey, I have a "copy to clipboard" button!
+```
+````
+
+````markdown
+```
+But I don't have one.
+```
+{: .no-copy}
+````
+{: .no-copy}
 
 ### Comments
 
@@ -362,7 +364,7 @@ defaults:
 
 If you add `comments: false` to a post's YAML Front Matter it will override the default and disable comments for just that post.
 
-**Note:** Comments are disabled by default in `development`. To enable when testing/building locally be sure to set
+**Note:** Comments are disabled in `development`. To enable when testing/building locally be sure to set
 `JEKYLL_ENV=production` to [force the environment](http://jekyllrb.com/docs/configuration/#specifying-a-jekyll-environment-at-build-time) to production.
 {: .notice--info}
 
@@ -795,8 +797,20 @@ twitter:
 
 And if I assign `@mmistakes` as an author account it will appear in the Twitter Card along with `@mmistakes-theme`, attributed as a creator of the page being shared.
 
-**Note**: You need to validate cards are working and have Twitter [approve Player Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/player-card) before they will begin showing up.
+**Note**: You need to validate cards are working and have Twitter [approve Player Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/player-card) before they begin showing up.
 {: .notice--warning}
+
+##### Fediverse creator
+
+If the site author (or a per-page author override) has a `fediverse` value set, a `<meta name="fediverse:creator">` tag is emitted. This enables "by @user@instance" attribution on Mastodon, Pixelfed, Flipboard, and other fediverse platforms — the same role `twitter:creator` plays for Twitter Cards.
+
+The value is set in the `author` block of `_config.yml` (or in `_data/authors.yml` for multi-author sites):
+
+```yaml
+author:
+  name: "Your Name"
+  fediverse: "@you@instance.social"
+```
 
 ##### Facebook Open Graph
 
@@ -824,24 +838,30 @@ For pages that don't have a `header.image` assigned in their YAML Front Matter, 
 
 ```yaml
 og_image: /assets/images/site-logo.png
+og_image_alt: "Site logo"
 ```
 
-<figure>
-  <img src="{{ '/assets/images/mm-twitter-card-summary-image.jpg' | relative_url }}" alt="Twitter Card summary example">
-  <figcaption>Example of a image placed in a Summary Card.</figcaption>
-</figure>
+`og_image_alt` sets the default alt text for `og:image:alt` and `twitter:image:alt` meta tags. This can be overridden per-page with `page.header.og_image_alt` in the YAML Front Matter. If no alt text is set, the tags are omitted.
+
+{% include figure
+   image_path="/assets/images/mm-twitter-card-summary-image.jpg"
+   alt="Twitter Card summary example"
+   caption="Example of an image placed in a Summary Card."
+%}
 
 Documents who have a `header.image` assigned in their YAML Front Matter will appear like this when shared on Twitter and Facebook.
 
-<figure>
-  <img src="{{ '/assets/images/mm-twitter-card-summary-large.jpg' | relative_url }}" alt="page shared on Twitter">
-  <figcaption>Shared page on Twitter with header image assigned.</figcaption>
-</figure>
+{% include figure
+   image_path="/assets/images/mm-twitter-card-summary-large.jpg"
+   alt="page shared on Twitter"
+   caption="Shared page on Twitter with header image assigned."
+%}
 
-<figure>
-  <img src="{{ '/assets/images/facebook-share-example.jpg' | relative_url }}" alt="page shared on Facebook">
-  <figcaption>Shared page on Facebook with header image assigned.</figcaption>
-</figure>
+{% include figure
+   image_path="/assets/images/facebook-share-example.jpg"
+   alt="page shared on Facebook"
+   caption="Shared page on Facebook with header image assigned."
+%}
 
 ##### Include your social profile in search results
 
@@ -862,12 +882,13 @@ social:
 
 Analytics is disabled by default. To enable globally select one of the following:
 
-| Name                 | Analytics Provider                                              |
-| -------------------- | --------------------------------------------------------------- |
-| **google**           | [Google Standard Analytics](https://www.google.com/analytics/)  |
-| **google-universal** | [Google Universal Analytics](https://www.google.com/analytics/) |
+| Name                 | Analytics Provider                                                    |
+| -------------------- | --------------------------------------------------------------------- |
+| **google**           | [Google Standard Analytics](https://www.google.com/analytics/)        |
+| **google-universal** | [Google Universal Analytics](https://www.google.com/analytics/)       |
 | **google-gtag**      | [Google Analytics Global Site Tag](https://www.google.com/analytics/) |
-| **custom**           | Other analytics providers                                       |
+| **swetrix**          | [Swetrix](https://swetrix.com/) GDPR-compliant analytics              |
+| **custom**           | Other analytics providers                                             |
 
 For Google Analytics add your Tracking Code:
 
@@ -879,9 +900,18 @@ analytics:
     anonymize_ip: false # default
 ```
 
+For Swetrix Analytics add your Tracking ID:
+
+```yaml
+analytics:
+  provider: "swetrix"
+  swetrix:
+    tracking_id: "xyz43567EF"
+```
+
 To use another provider not included with the theme set `provider: "custom"` then add their embed code to `_includes/analytics-providers/custom.html`.
 
-**Note:** Analytics are disabled by default in `development`. To enable when testing/building locally be sure to set
+**Note:** Analytics are disabled in `development`. To enable when testing/building locally be sure to set
 `JEKYLL_ENV=production` to [force the environment](http://jekyllrb.com/docs/configuration/#specifying-a-jekyll-environment-at-build-time) to production.
 {: .notice--info}
 
@@ -900,15 +930,16 @@ author:
   avatar   : "/assets/images/bio-photo.jpg"
   bio      : "My awesome biography constrained to a sentence or two goes here."
   location : "Somewhere, USA"
+  fediverse: "@you@instance.social"
 ```
 
 Author links are all optional, include the ones you want visible under the `author.links` array.
 
-| Name | Description |
-| --- | --- |
-| **label** | Link label (e.g. `"Twitter"`) |
-| **icon** | [Font Awesome icon](https://fontawesome.com/v5/search) classes (e.g. `"fab fa-fw fa-twitter-square"`) |
-| **url** | Link URL (e.g. `"https://twitter.com/mmistakes"`) |
+| Name      | Description                                                                                           |
+| --------- | ----------------------------------------------------------------------------------------------------- |
+| **label** | Link label (e.g. `"Twitter"`)                                                                         |
+| **icon**  | [Font Awesome icon](https://fontawesome.com/v6/search) classes (e.g. `"fab fa-fw fa-square-x-twitter"`) |
+| **url**   | Link URL (e.g. `"https://twitter.com/mmistakes"`)                                                     |
 
 ```yaml
 author:
@@ -921,7 +952,7 @@ author:
       icon: "fas fa-fw fa-link"
       url: "https://mademistakes.com"
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+      icon: "fab fa-fw fa-square-x-twitter"
       url: "https://twitter.com/mmistakes"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -937,21 +968,23 @@ To customize the author sidebar, read the full [layout documentation]({{ "/docs/
 
 Footer links can be added under the `footer.links` array.
 
-| Name | Description |
-| --- | --- |
-| **label** | Link label (e.g. `"Twitter"`) |
-| **icon** | [Font Awesome icon](https://fontawesome.com/v5/search) classes (e.g. `"fab fa-fw fa-twitter-square"`) |
-| **url** | Link URL (e.g. `"https://twitter.com/mmistakes"`) |
+| Name      | Description                                                                                                                                                   |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **label** | Link label (e.g. `"Twitter"`)                                                                                                                                 |
+| **icon**  | [Font Awesome icon](https://fontawesome.com/v6/search) classes (e.g. `"fab fa-fw fa-square-x-twitter"`)                                                         |
+| **url**   | Link URL (e.g. `"https://twitter.com/mmistakes"`)                                                                                                             |
+| **rel**   | Optional [link relation](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel) appended to the default `nofollow noopener noreferrer` (e.g. `"me"` for [IndieWeb web sign-in](https://indieweb.org/How_to_set_up_web_sign-in_on_your_own_domain)) |
 
 ```yaml
 footer:
   links:
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+      icon: "fab fa-fw fa-square-x-twitter"
       url: "https://twitter.com/mmistakes"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/mmistakes"
+      rel: "me"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/mmistakes"
@@ -962,13 +995,22 @@ footer:
 
 To change "Follow:" text that precedes footer links, edit the `follow_label` key in `_data/ui-text.yml`.
 
+The copyright notice in the footer shows the year the site has been generated. This can be overridden with `time` in `_config.yml`. If `footer.since` is added and the value is not equal to the current year or the optional value of `time`, then a time range will be shown.
+
+```yaml
+footer:
+  since: "2013"
+```
+
+The above will result for example in `© 2013 - 2025 Minimal ...`. Note that `time` and `footer.since` also support values other than year numbers.
+
 ## Reading files
 
 Nothing out of the ordinary here. `include` and `exclude` may be the only things you need to alter.
 
 ## Conversion and Markdown processing
 
-Again nothing out of the ordinary here as the theme adheres to the defaults used by GitHub Pages. [**Kramdown**](http://kramdown.gettalong.org/) for Markdown conversion, [**Rouge**](http://rouge.jneen.net/) syntax highlighting, and incremental building disabled. Change them if you need to.
+Again nothing out of the ordinary here as the theme adheres to the defaults used by GitHub Pages. [**Kramdown**](http://kramdown.gettalong.org/) for Markdown conversion, [**Rouge**](https://rouge.jneen.net/) syntax highlighting, and incremental building disabled. Change them if you need to.
 
 ## Front Matter Defaults
 
@@ -1040,8 +1082,75 @@ The paginator only works on files with name `index.html`. To use pagination in a
 paginate_path: /recent/page:num/
 ```
 
-**Please note:** When using Jekyll's default [pagination plugin](https://jekyllrb.com/docs/pagination/) `paginator.posts` can only be called once. If you're looking for something more powerful that can paginate category, tag, and collection pages I suggest [**jekyll-paginate-v2**](https://github.com/sverrirs/jekyll-paginate-v2).
+**Please note:** When using Jekyll's default [pagination plugin](https://jekyllrb.com/docs/pagination/) `paginator.posts` can only be called once. If you're looking for something more powerful that can paginate category, tag, and collection pages I suggest **[jekyll-paginate-v2][jekyll-paginate-v2]**.
 {: .notice--info}
+
+  [jekyll-paginate-v2]: https://github.com/sverrirs/jekyll-paginate-v2
+
+### Paginate V2
+
+*New in v4.26.0*
+
+If you're using [Jekyll Paginate V2][jekyll-paginate-v2], you can enjoy its powerful features by removing `paginate` and `paginate_path` and adding the following configuration to your `_config.yml`:
+
+```yaml
+pagination:
+  enabled: true
+  collection: 'posts'
+  per_page: 5
+  permalink: '/page/:num/'  # Pages are index.html inside this folder (default)
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+```
+
+Then, create `/posts/index.html` with the following content:
+
+```html
+---
+title: "Posts"
+layout: home
+permalink: /posts/
+pagination:
+  enabled: true
+---
+```
+
+Your posts will be paginated at `/posts/`, `/posts/page/2/` and `/posts/page/3/` etc.
+
+Similarly, if you want to paginate a collection or a tag, you can create another `index.html` at an appropriate location, and add configuration to the `pagination` key in the front matter, like this:
+
+```html
+---
+title: "Lovely pets"
+layout: home
+permalink: /pets/
+pagination:
+  enabled: true
+  collection:
+    - cat
+    - dog
+---
+```
+
+<div class="notice--danger" markdown="1">
+**Note:** There are two more configuration options from Jekyll Paginate V2 that this theme doesn't support yet. You should either leave them out or use their default values as shown below. Changing them may lead to unexpected results and you're on your own.
+
+```yaml
+pagination:
+  # Optional, the default file extension for generated pages (e.g html, json, xml).
+  # Internally this is set to html by default
+  extension: html
+
+  # Optional, the default name of the index file for generated pages (e.g. 'index.html')
+  # Without file extension
+  indexpage: 'index'
+```
+</div>
 
 ### Timezone
 
@@ -1055,13 +1164,13 @@ timezone: America/New_York
 
 When hosting with GitHub Pages a small [set of gems](https://pages.github.com/versions/) have been whitelisted for use. The theme uses a few of them which can be found under `gems`. Additional settings and configurations are documented in the links below.
 
-| Plugin | Description                                                                               |
-| --- | --- |
-| [jekyll-paginate][jekyll-paginate] | Pagination Generator for Jekyll. |
-| [jekyll-sitemap][jekyll-sitemap] | Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site. |
-| [jekyll-gist][jekyll-gist] | Liquid tag for displaying GitHub Gists in Jekyll sites. |
-| [jekyll-feed][jekyll-feed] | A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts. |
-| [jekyll-include-cache][jekyll-include-cache] | Liquid tag that caches Liquid includes. |
+| Plugin                                       | Description                                                                               |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| [jekyll-paginate][jekyll-paginate]           | Pagination Generator for Jekyll.                                                          |
+| [jekyll-sitemap][jekyll-sitemap]             | Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site. |
+| [jekyll-gist][jekyll-gist]                   | Liquid tag for displaying GitHub Gists in Jekyll sites.                                   |
+| [jekyll-feed][jekyll-feed]                   | A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts.                 |
+| [jekyll-include-cache][jekyll-include-cache] | Liquid tag that caches Liquid includes.                                                   |
 
 [jekyll-paginate]: https://github.com/jekyll/jekyll-paginate
 [jekyll-sitemap]: https://github.com/jekyll/jekyll-sitemap
@@ -1092,6 +1201,12 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+```
+
+To hide the tag and category lists displayed on each post, set `show_taxonomy: false` in `_config.yml`. The taxonomy archive pages themselves are unaffected — only the per-post lists are suppressed.
+
+```yaml
+show_taxonomy: false
 ```
 
 Which would create category and tag links in the breadcrumbs and page meta like: `/categories/#foo` and `/tags/#foo`.
@@ -1165,7 +1280,7 @@ If you care at all about performance (and really who doesn't) compressing the HT
 
 If you're hosting with GitHub Pages there aren't many options afforded to you for optimizing the HTML Jekyll generates. Thankfully there is some Liquid wizardry you can use to strip whitespace and comments to reduce file size.
 
-There's a variety of configurations and caveats to using the `compress` layout, so be sure to read through the [documentation](http://jch.penibelst.de/) if you decide to make change the defaults set in the theme's `_config.yml`.
+There's a variety of configurations and caveats to using the `compress` layout, so be sure to read through the [documentation](http://jch.penibelst.de/) if you decide to change the defaults set in the theme's `_config.yml`.
 
 ```yaml
 compress_html:
