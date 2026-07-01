@@ -39,6 +39,9 @@ layout: default
           {% include page__meta.html locale=locale %}
         </header>
       {% endunless %}
+      
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538805184582747"
+     crossorigin="anonymous"></script>
 
       <section class="page__content e-content" itemprop="text">
         {% if page.toc %}
@@ -53,6 +56,7 @@ layout: default
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
+   
       <footer class="page__meta">
         {% if site.data.ui-text[locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[locale].meta_label }}</h4>
@@ -85,4 +89,6 @@ layout: default
   {% elsif page.id and page.related %}
     {% include page__related.html locale=locale posts=site.posts %}
   {% endif %}
+    
 </div>
+
