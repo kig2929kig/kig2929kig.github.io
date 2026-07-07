@@ -1,33 +1,42 @@
-<!-- 이스터 에그: 매트릭스 디지털 레인 효과 -->
+<!-- 이스터 에그: 매트릭스 디지털 레인 효과 (모바일/PC 겸용) -->
 <script>
 (function() {
   let inputBuffer = "";
   const targetWord = "matrix";
+  let tapCount = 0;
+  let lastTapTime = 0;
 
-  // 사용자의 키보드 입력을 감시하는 이벤트 리스너
+  // 1. 키보드 입력 감지 (PC용)
   window.addEventListener("keydown", (e) => {
-    // 알파벳이나 숫자 등 단일 문자 입력만 처리
     if (e.key.length === 1) {
       inputBuffer += e.key.toLowerCase();
-      
-      // 입력 버퍼를 타겟 단어 길이만큼만 유지 (메모리 절약 및 연속 입력 체크)
-      if (inputBuffer.length > targetWord.length) {
-        inputBuffer = inputBuffer.slice(-targetWord.length);
-      }
-      
-      // 비밀 명령어가 일치하면 효과 실행
+      if (inputBuffer.length > targetWord.length) inputBuffer = inputBuffer.slice(-targetWord.length);
       if (inputBuffer === targetWord) {
         startMatrixEffect();
-        inputBuffer = ""; // 버퍼 초기화
+        inputBuffer = "";
       }
     }
   });
 
+  // 2. 터치 입력 감지 (모바일용: 3번 빠르게 클릭/터치)
+  document.addEventListener("click", () => {
+    const currentTime = new Date().getTime();
+    if (currentTime - lastTapTime < 500) { // 0.5초 이내에 연속 터치 확인
+      tapCount++;
+    } else {
+      tapCount = 1;
+    }
+    lastTapTime = currentTime;
+
+    if (tapCount === 3) {
+      startMatrixEffect();
+      tapCount = 0;
+    }
+  });
+
   function startMatrixEffect() {
-    // 이미 매트릭스가 실행 중이라면 중복 실행 방지
     if (document.getElementById("matrix-canvas")) return;
 
-    // 1. 전체 화면을 덮을 캔버스 생성 및 스타일 설정
     const canvas = document.createElement("canvas");
     canvas.id = "matrix-canvas";
     canvas.style.position = "fixed";
@@ -35,7 +44,7 @@
     canvas.style.left = "0";
     canvas.style.width = "100vw";
     canvas.style.height = "100vh";
-    canvas.style.zIndex = "999999"; // 최상단에 위치
+    canvas.style.zIndex = "999999";
     canvas.style.background = "black";
     document.body.appendChild(canvas);
 
@@ -43,66 +52,45 @@
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // 2. 떨어질 글자 데이터 세팅 (카타카나 + 숫자)
     const chars = "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ1023456789".split("");
     const fontSize = 16;
     const columns = canvas.width / fontSize;
-
-    // 각 열의 시작 Y 좌표를 1로 초기화
     const rainDrops = Array(Math.floor(columns)).fill(1);
 
-    // 3. 디지털 레인 그리기 함수
     const draw = () => {
-      // 반투명한 검은색을 칠해 이전 글자가 서서히 지워지는 잔상 효과를 줌
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      ctx.fillStyle = "#0F0"; // 매트릭스 특유의 초록색
+      ctx.fillStyle = "#0F0";
       ctx.font = fontSize + "px monospace";
-
       for (let i = 0; i < rainDrops.length; i++) {
         const text = chars[Math.floor(Math.random() * chars.length)];
         ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
-
-        // 화면 바닥에 도달하면 무작위 확률로 다시 맨 위로 리셋
-        if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          rainDrops[i] = 0;
-        }
+        if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) rainDrops[i] = 0;
         rainDrops[i]++;
       }
     };
 
     const matrixInterval = setInterval(draw, 30);
 
-    // 4. 창 크기가 바뀔 때 대응
-    window.addEventListener("resize", () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    });
+    // 모바일 종료 버튼
+    const closeBtn = document.createElement("div");
+    closeBtn.innerText = "터치하여 종료";
+    closeBtn.style.position = "fixed";
+    closeBtn.style.bottom = "20px";
+    closeBtn.style.left = "50%";
+    closeBtn.style.transform = "translateX(-50%)";
+    closeBtn.style.color = "#0F0";
+    closeBtn.style.padding = "10px 20px";
+    closeBtn.style.border = "1px solid #0F0";
+    closeBtn.style.borderRadius = "5px";
+    closeBtn.style.zIndex = "1000000";
+    document.body.appendChild(closeBtn);
 
-    // 5. ESC 키를 누르면 이스터 에그 종료
-    const closeEffect = (e) => {
-      if (e.key === "Escape") {
-        clearInterval(matrixInterval);
-        canvas.remove();
-        tip.remove();
-        window.removeEventListener("keydown", closeEffect);
-      }
-    };
-    window.addEventListener("keydown", closeEffect);
-    
-    // 종료 안내 팁 띄우기
-    const tip = document.createElement("div");
-    tip.innerText = "ESC를 누르면 원래 화면으로 돌아옵니다.";
-    tip.style.position = "fixed";
-    tip.style.bottom = "20px";
-    tip.style.left = "50%";
-    tip.style.transform = "translateX(-50%)";
-    tip.style.color = "#0F0";
-    tip.style.fontFamily = "monospace";
-    tip.style.fontSize = "14px";
-    tip.style.zIndex = "1000000";
-    document.body.appendChild(tip);
+    closeBtn.addEventListener("click", () => {
+      clearInterval(matrixInterval);
+      canvas.remove();
+      closeBtn.remove();
+    });
   }
 })();
 </script>
