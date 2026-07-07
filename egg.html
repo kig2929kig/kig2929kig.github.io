@@ -1,4 +1,4 @@
-<!-- 이스터 에그: 매트릭스 디지털 레인 효과 (모바일/PC 겸용) -->
+<!-- 이스터 에그: 매트릭스 디지털 레인 효과 (모바일/PC 완벽 대응) -->
 <script>
 (function() {
   let inputBuffer = "";
@@ -6,11 +6,13 @@
   let tapCount = 0;
   let lastTapTime = 0;
 
-  // 1. 키보드 입력 감지 (PC용)
+  // 1. PC용 키보드 입력 감지 ('matrix' 입력)
   window.addEventListener("keydown", (e) => {
     if (e.key.length === 1) {
       inputBuffer += e.key.toLowerCase();
-      if (inputBuffer.length > targetWord.length) inputBuffer = inputBuffer.slice(-targetWord.length);
+      if (inputBuffer.length > targetWord.length) {
+        inputBuffer = inputBuffer.slice(-targetWord.length);
+      }
       if (inputBuffer === targetWord) {
         startMatrixEffect();
         inputBuffer = "";
@@ -18,10 +20,16 @@
     }
   });
 
-  // 2. 터치 입력 감지 (모바일용: 3번 빠르게 클릭/터치)
-  document.addEventListener("click", () => {
+  // 2. 모바일/PC 통합 터치·클릭 감지 (3번 빠르게 터치)
+  // 모바일 확대 딜레이를 우회하기 위해 'click' 대신 'pointerdown'을 사용합니다.
+  window.addEventListener("pointerdown", (e) => {
+    // 마우스 클릭일 경우 왼쪽 버튼(0)만 인정
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+
     const currentTime = new Date().getTime();
-    if (currentTime - lastTapTime < 500) { // 0.5초 이내에 연속 터치 확인
+    
+    // 터치 간격이 0.4초(400ms) 이내면 연속 터치로 인정
+    if (currentTime - lastTapTime < 400) {
       tapCount++;
     } else {
       tapCount = 1;
@@ -30,7 +38,7 @@
 
     if (tapCount === 3) {
       startMatrixEffect();
-      tapCount = 0;
+      tapCount = 0; // 카운트 초기화
     }
   });
 
@@ -49,44 +57,65 @@
     document.body.appendChild(canvas);
 
     const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resizeCanvas();
 
     const chars = "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ1023456789".split("");
     const fontSize = 16;
-    const columns = canvas.width / fontSize;
-    const rainDrops = Array(Math.floor(columns)).fill(1);
+    let columns = canvas.width / fontSize;
+    let rainDrops = Array(Math.floor(columns)).fill(1);
 
     const draw = () => {
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "#0F0";
       ctx.font = fontSize + "px monospace";
+      
       for (let i = 0; i < rainDrops.length; i++) {
         const text = chars[Math.floor(Math.random() * chars.length)];
         ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
-        if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) rainDrops[i] = 0;
+        if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          rainDrops[i] = 0;
+        }
         rainDrops[i]++;
       }
     };
 
     const matrixInterval = setInterval(draw, 30);
 
-    // 모바일 종료 버튼
+    // 화면 크기 변경 대응
+    window.addEventListener("resize", () => {
+      resizeCanvas();
+      columns = canvas.width / fontSize;
+      rainDrops = Array(Math.floor(columns)).fill(1);
+    });
+
+    // 3. 종료 버튼 생성 및 스타일링
     const closeBtn = document.createElement("div");
     closeBtn.innerText = "터치하여 종료";
     closeBtn.style.position = "fixed";
-    closeBtn.style.bottom = "20px";
+    closeBtn.style.bottom = "40px";
     closeBtn.style.left = "50%";
     closeBtn.style.transform = "translateX(-50%)";
     closeBtn.style.color = "#0F0";
-    closeBtn.style.padding = "10px 20px";
-    closeBtn.style.border = "1px solid #0F0";
-    closeBtn.style.borderRadius = "5px";
+    closeBtn.style.padding = "12px 24px";
+    closeBtn.style.border = "2px solid #0F0";
+    closeBtn.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+    closeBtn.style.borderRadius = "30px";
+    closeBtn.style.fontSize = "16px";
+    closeBtn.style.fontWeight = "bold";
+    closeBtn.style.fontFamily = "monospace";
+    closeBtn.style.cursor = "pointer";
     closeBtn.style.zIndex = "1000000";
     document.body.appendChild(closeBtn);
 
-    closeBtn.addEventListener("click", () => {
+    // 버튼 터치 시 이스터에그 종료 (이벤트 전파를 막아 재트리거 방지)
+    closeBtn.addEventListener("pointerdown", (e) => {
+      e.stopPropagation();
       clearInterval(matrixInterval);
       canvas.remove();
       closeBtn.remove();
